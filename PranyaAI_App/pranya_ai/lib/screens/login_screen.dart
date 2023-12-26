@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    isUserMode = true; // Default to user mode
+    isUserMode = true; //
   }
 
   @override
@@ -23,7 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return WillPopScope(
       onWillPop: () async {
         // Handle back button press
-        return true; // Return false if you want to prevent the user from leaving the screen
+        return true; //
       },
       child: Scaffold(
         backgroundColor: Colors.blueGrey[900], // Background color
@@ -135,7 +135,6 @@ class _LoginFormState extends State<LoginForm> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement your login logic here
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
