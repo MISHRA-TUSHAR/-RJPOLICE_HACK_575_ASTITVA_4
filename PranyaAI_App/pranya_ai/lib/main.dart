@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pranya_ai/screens/splash_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

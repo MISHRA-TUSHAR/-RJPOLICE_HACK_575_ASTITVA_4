@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:pranya_ai/screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
