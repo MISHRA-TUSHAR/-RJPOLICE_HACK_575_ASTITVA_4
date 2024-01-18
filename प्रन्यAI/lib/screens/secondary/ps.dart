@@ -20,24 +20,40 @@ class _LocatePSScreenState extends State<LocatePSScreen> {
         title: Text('Locate Nearest Police Station'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () async {
-                await getCurrentLocation();
-              },
-              child: Text('Get Current Location'),
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Location: $locationMessage',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () async {
+                  await getCurrentLocation();
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.orange,
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  'Get Current Location',
+                  style: TextStyle(fontSize: 18),
+                ),
               ),
-            ),
-          ],
+              SizedBox(height: 20),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  'Location: $locationMessage',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
